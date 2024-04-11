@@ -1,5 +1,6 @@
 {
   imports = [
+    ./autopairs.nix
     ./colorscheme.nix
     ./completion.nix
     ./dap.nix
