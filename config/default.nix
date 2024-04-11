@@ -10,6 +10,7 @@
     ./metals.nix
     ./multicursors.nix
     ./neotest.nix
+    ./neotree.nix
     ./telescope.nix
     ./treesitter.nix
   ];
