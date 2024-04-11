@@ -8,6 +8,7 @@
     ./lspsaga.nix
     ./lualine.nix
     ./metals.nix
+    ./multicursors.nix
     ./neotest.nix
     ./telescope.nix
     ./treesitter.nix
