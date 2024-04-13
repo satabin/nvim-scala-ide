@@ -30,6 +30,7 @@ in
   };
 
   plugins.cmp-dap.enable = true;
+  plugins.baleia.enable = true; # colorize terminal output
 
   keymaps = [
     {
@@ -124,5 +125,28 @@ in
       dapui.close('sidebar')
     end
   '';
+
+  autoGroups = {
+    dap-colorize = {
+      clear = true;
+    };
+  };
+
+  autoCmd = [
+    {
+      event = "FileType";
+      pattern = [ "dap-repl" ];
+      callback =
+        {
+          __raw = /* lua */ ''
+            function()
+              local baleia = require('baleia').setup()
+              baleia.automatically(vim.fn.bufnr('%'))
+            end
+          '';
+        };
+      group = "dap-colorize";
+    }
+  ];
 
 }

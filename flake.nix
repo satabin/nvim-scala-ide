@@ -14,7 +14,7 @@
     };
   };
 
-  outputs = { nixvim, flake-parts, ... } @ inputs:
+  outputs = { self, nixvim, flake-parts, ... } @ inputs:
     flake-parts.lib.mkFlake { inherit inputs; } {
       systems = [
         "x86_64-linux"
@@ -33,11 +33,7 @@
           nixvim' = nixvim.legacyPackages.${system};
           nixvimModule = {
             inherit pkgs;
-            module = import ./config; # import the module directly
-            # You can use `extraSpecialArgs` to pass additional arguments to your module files
-            extraSpecialArgs = {
-              # inherit (inputs) foo;
-            };
+            module = import ./config;
           };
           nvim = nixvim'.makeNixvimWithModule nixvimModule;
         in
@@ -47,7 +43,8 @@
           };
 
           packages = {
-            default = nvim;
+            nvim-scala-ide = nvim;
+            default = self.packages."${system}".nvim-scala-ide;
           };
         };
     };
