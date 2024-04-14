@@ -12,7 +12,7 @@ in
         {
           type = "scala";
           request = "launch";
-          name = "RunOrTest";
+          name = "Run Or Test";
           metals = {
             runType = "runOrTestFile";
           };
