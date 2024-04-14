@@ -15,6 +15,7 @@
     ./scaladex.nix
     ./telescope.nix
     ./treesitter.nix
+    ./which-key.nix
   ];
 
   opts = {

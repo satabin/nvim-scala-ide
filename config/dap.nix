@@ -42,7 +42,7 @@ in
           require("dap").continue()
         end
       '';
-      options = options;
+      options = options // { desc = "Start or continue debugger"; };
     }
     {
       mode = "n";
@@ -53,7 +53,7 @@ in
           require("dap").repl.toggle()
         end
       '';
-      options = options;
+      options = options // { desc = "Toggle debugger REPL"; };
     }
     {
       mode = "n";
@@ -64,7 +64,7 @@ in
           require("dap.ui.widgets").hover()
         end
       '';
-      options = options;
+      options = options // { desc = "Show debugger hover"; };
     }
     {
       mode = "n";
@@ -75,7 +75,7 @@ in
           require("dap").toggle_breakpoint()
         end
       '';
-      options = options;
+      options = options // { desc = "Toggle breakpoint"; };
     }
     {
       mode = "n";
@@ -86,7 +86,7 @@ in
           require("dap").step_over()
         end
       '';
-      options = options;
+      options = options // { desc = "Step over"; };
     }
     {
       mode = "n";
@@ -97,7 +97,7 @@ in
           require("dap").step_into()
         end
       '';
-      options = options;
+      options = options // { desc = "Step into"; };
     }
     {
       mode = "n";
@@ -108,7 +108,7 @@ in
           require("dap").run_last()
         end
       '';
-      options = options;
+      options = options // { desc = "Rerun last"; };
     }
   ];
 

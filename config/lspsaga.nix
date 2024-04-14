@@ -16,6 +16,7 @@
       options = {
         noremap = true;
         silent = true;
+        desc = "Toggle floating terminal";
       };
     }
   ];

@@ -21,6 +21,7 @@
       options = {
         noremap = true;
         silent = true;
+        desc = "Search in scaladex";
       };
     }
   ];
