@@ -7,6 +7,14 @@ in
     extensions.dap-ui.enable = true;
     extensions.dap-virtual-text.enable = true;
 
+    signs = {
+      dapBreakpoint.text = "";
+      dapBreakpointCondition.text = "ﳁ";
+      dapBreakpointRejected.text = "";
+      dapLogPoint.text = "";
+      dapStopped.text = "";
+    };
+
     configurations = {
       scala = [
         {
