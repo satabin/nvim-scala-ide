@@ -112,6 +112,12 @@ in
     }
   ];
 
+  userCommands = {
+    DebugToggle = {
+      command = "lua require('dapui').toggle()";
+    };
+  };
+
   extraConfigLua = /* lua */ ''
     local dap = require('dap')
     local dapui = require('dapui')
