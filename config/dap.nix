@@ -129,6 +129,28 @@ in
       '';
       options = options // { desc = "Rerun last"; };
     }
+    {
+      mode = "v";
+      key = "<leader>dw";
+      lua = true;
+      action = /* lua */ ''
+        function()
+          require("dapui").elements.watches.add()
+        end
+      '';
+      options = options // { desc = "Watch selected expression"; };
+    }
+    {
+      mode = "n";
+      key = "<leader>dw";
+      lua = true;
+      action = /* lua */ ''
+        function()
+          require("dapui").elements.watches.add()
+        end
+      '';
+      options = options // { desc = "Watch variable"; };
+    }
   ];
 
   userCommands = {
