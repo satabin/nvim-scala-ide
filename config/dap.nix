@@ -87,6 +87,17 @@ in
     }
     {
       mode = "n";
+      key = "<leader>dlp";
+      lua = true;
+      action = /* lua */ ''
+        function()
+          require("dap").set_breakpoint(nil, nil, vim.fn.input('Log point message: '))
+        end
+      '';
+      options = options // { desc = "Set log point"; };
+    }
+    {
+      mode = "n";
       key = "<leader>dso";
       lua = true;
       action = /* lua */ ''
