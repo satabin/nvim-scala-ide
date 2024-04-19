@@ -10,12 +10,5 @@
       "scala"
     ];
 
-    grammarPackages = with pkgs.vimPlugins.nvim-treesitter-parsers; [
-      hocon
-      java
-      json
-      markdown
-      scala
-    ];
   };
 }
