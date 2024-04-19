@@ -10,7 +10,6 @@
     ./lualine.nix
     ./metals.nix
     ./multicursors.nix
-    ./neotest.nix
     ./neotree.nix
     ./scaladex.nix
     ./telescope.nix
