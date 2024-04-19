@@ -8,10 +8,10 @@ in
     extensions.dap-virtual-text.enable = true;
 
     signs = {
-      dapBreakpoint.text = "";
-      dapBreakpointCondition.text = "ﳁ";
+      dapBreakpoint.text = "󰉀";
+      dapBreakpointCondition.text = "󰈼";
       dapBreakpointRejected.text = "";
-      dapLogPoint.text = "";
+      dapLogPoint.text = "";
       dapStopped.text = "";
     };
 
