@@ -6,7 +6,7 @@ To run it locally, you can run the following command:
 $ nix run github:satabin/nvim-scala-ide
 ```
 
-If you want to use pre-compiled versions (linux amd64 and macos arm64), you can [setup my cachix cache first](https://app.cachix.org/cache/satabin#pull). This way you will avoid compiling everything locally the first time.
+Pre-compiled versions (linux amd64 and macos arm64) are published to my [personal cachix cache](https://app.cachix.org/cache/satabin#pull). This way you will avoid compiling everything locally the first time.
 
 This flake is based on the following plugins:
  - [nvim-metals](https://github.com/scalameta/nvim-metals) for the language server part.

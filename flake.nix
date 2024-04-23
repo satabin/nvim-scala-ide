@@ -1,6 +1,15 @@
 {
   description = "An opinionated Scala IDE with Neovim";
 
+  nixConfig = {
+    extra-substituters = [
+      "https://satabin.cachix.org"
+    ];
+    extra-trusted-public-keys = [
+      "satabin.cachix.org-1:bd7rKQpm4hhIj9E6OpIBsphk6n+M89M9Eb0l2+6Arss="
+    ];
+  };
+
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixvim = {
